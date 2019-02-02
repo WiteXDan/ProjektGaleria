@@ -1,0 +1,74 @@
+*{
+  margin: 0;
+  font-family: Lucida Sans Unicode;
+}
+
+body{
+
+  background-image: url("background.png");
+  background-color: #ef54ad;
+  background-color: black;
+  /* dodaæ lekkie t³o (bia³e?) */
+}
+
+label {
+  display: inline-block;
+  width: 180px;
+  margin-left: -20px;
+  text-align: right;
+  color: white;
+}?
+
+a:link, a:visited { text-decoration: none;}
+
+ul{
+  padding: 0;
+  margin: 0;
+
+  background-color: #5fc938;
+  color: #0462ef;
+  font-family: Lucida Sans Unicode;
+}
+
+h1 {
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  padding-top: 0px;
+  font-size: 50px;
+}
+footer p{
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  margin-left: 50%;
+  display:in-inline-block;
+}
+
+input[type=text], input[type=password], input[type=email], select {
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+input[type=submit]{
+  width: 70%;
+  height: ;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  height: calc(100vh - 24.44px - 24.44px);
+}

@@ -1,0 +1,351 @@
+*{
+  margin: 0;
+  font-family: Lucida Sans Unicode;
+}
+
+body{
+
+  background-image: url("background.png");
+  background-color: #ef54ad;
+  background-color: black;
+  /* dodać lekkie tło (białe?) */
+}
+
+label {
+  display: inline-block;
+  width: 180px;
+  margin-left: -20px;
+  text-align: right;
+  color: white;
+}​
+
+a:link, a:visited { text-decoration: none;}
+
+ul{
+  padding: 0;
+  margin: 0;
+
+  background-color: #5fc938;
+  color: #0462ef;
+  font-family: Lucida Sans Unicode;
+}
+
+h1 {
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  padding-top: 0px;
+  font-size: 50px;
+}
+footer p{
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  margin-left: 50%;
+  display:in-inline-block;
+}
+
+input[type=text], input[type=password], input[type=email], select {
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+input[type=submit]{
+  width: 70%;
+  height: ;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  height: calc(100vh - 24.44px - 24.44px);
+}
+
+/***************************/
+/*       index.php        */
+.rejestracja, .logowanie{
+  box-sizing: border-box;
+  height: 400px;
+  width: 400px;
+    margin-top: 100px;
+  padding-top: 6%;
+  border-radius: 100px;
+    background-color: rgba(123, 96, 24, 0.5);
+      text-align: center;
+      font-size: 15px;
+  float: left;
+
+  border-style: solid;
+  border-width: 10px;
+}
+.rejestracja{
+  margin-left:150px;
+}
+.logowanie{
+  margin-left:18vh;
+}
+.rejestracja h3{
+  font-size: 40px;
+  color: #bf1313;
+  font-weight: bold;
+}
+
+.logowanie h3{
+  color: #e5990b;
+  font-size: 45px;
+}
+/***************************/
+/*       Galeria.php        */
+
+p{
+  color: white;
+  text-align: center;
+}
+
+.aktywny, .nieaktywny{
+  font-size: 15px;
+  color: red;
+}
+
+.strony{
+  width: 10%;
+  font-size: 20px;
+  text-align: center;
+}
+
+#container-galeria, #table-index {
+  position: relative;
+  width: 800px;
+  margin-left: -400px;
+  padding: 20px;
+  left: 50%;
+  right: 50%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#outer-galeria {
+  padding-bottom: 50px;
+}
+
+/***************************/
+/*       album.php        */
+.album {
+
+  font-size: 20px;
+  text-decoration: none;
+  color: red;
+  text-align: center;
+    margin-right: 10%;
+  margin-left: 10%;
+}
+.album img{
+  margin: 5px;
+}
+.album a[href*="galeria"] {
+  text-decoration: none;
+  background-color: rgba(255,0,0,0.15);
+  color: #f61282;
+  border: 1px;
+  border-color: #E80C42;
+  border-style: solid;
+}
+
+/***************************/
+/*       foto.php        */
+.foto {
+  padding-top: 5%;
+    text-align: center;
+    color: white;
+}
+.foto a[href*="album"] {
+    text-decoration: none;
+    background-color: rgba(255,0,0,0.15);
+    color: #2CFFD5;
+    border: 1px;
+    border-color: #B22F00;
+    border-style: solid;
+
+}
+
+/***************************/
+/*       menu.php        */
+.navbar{
+  background-color:  rgba(84, 99, 71, 0.5);
+}
+.subbar{
+  background-color:  rgba(84, 99, 71, 0.5);
+  width: calc(100vw - 160px);
+  float: right;
+}
+.subbar a {
+  float: left;
+  display: block;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  z-index: 8;
+  width:20%;
+  box-sizing: border-box;
+}
+.subbar a:hover {
+  background-color: #ddd;
+  color: black;
+  z-index: 8;
+  transition: background 0.8s, color 0.8s;
+}
+.subbar a.active {
+  background-color: #820000;
+  color: white;
+  z-index: 8;
+}
+.IsLogged {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right:15px;
+  color:#c6483f;
+}
+
+.sub-menu-parent {
+  color: white;
+  position: relative;
+  width: 10em;
+  text-align: center;
+  background-attachment: fixed;
+  background-color: grey;
+  list-style: none;
+  font-family: Lucida Sans Unicode;
+  float: left;
+  }
+
+.sub-menu {
+  visibility: hidden; /* hides sub-menu */
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-2em);
+  -ms-transform: translateY(-2em);
+  -o-transform: translateY(-2em);
+  -webkit-transform: translateY(-2em);
+  z-index: -1;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  -moz-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  -o-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+/* .sub-menu:not(.menuCol) a:link, a:visited { color: blue;  } */
+/* .menuCol a:link, a:visited { color: #033d04;} */
+
+.sub-menu a {  text-decoration: none;}
+.sub-menu a:hover {  color: red;}
+
+.sub-menu-parent:focus .sub-menu,
+.sub-menu-parent:focus-within .sub-menu,
+.sub-menu-parent:hover .sub-menu {
+  visibility: visible; /*pokazuje sub-menu*/
+  opacity: 1;
+  z-index: 1;
+
+    transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+  -o-transform: translateY(0%);
+
+  transition-delay: 0s, 0s, 0.3s; /* usuwa opóźnienie tranzycji więc menu będzie widoczne podczas tranzycji innych elementów */
+  -ms-transition-delay: 0s, 0s, 0.3s;
+  -webkit-transition-delay: 0s, 0s, 0.3s;
+  -o-transition-delay: 0s, 0s, 0.3s;
+}
+
+
+
+/***************************/
+/*       konto.php        */
+#MojeDane, #MojeAlbumy, #MojeZdjecia{
+  color: black;
+  background-color: rgba(190, 204, 226, 0.3);
+
+}
+
+#MojeDane {
+  padding-left: 10%;
+}
+
+#MojeDane table {
+  position: relative;
+  width: 300px;
+  margin-left: -400px;
+  padding: 20px;
+  left: 50%;
+  right: 50%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#MojeDane input[type=submit]{
+  width: 20%;
+  height: 5%;
+  padding: 0px;
+  margin-left: 14%;
+}
+
+#MojeAlbumy .sortu {
+  margin-left: 43%;
+}
+#ZmianaDanych label:first-child{
+  width: 200px;
+  margin-left: -50px;
+}
+
+/**********************/
+/*     komentarze.php */
+#pojemnik{
+  background-color: red;
+  height: auto;
+  width: 80%;
+}
+
+#AllLista, #UnacceptedLista{
+  color: white;
+  float:left;
+}
+#AllLista input[type=submit]{
+  width: 100px;
+}
+
+#AllLista{
+  margin-left: 20%;
+}
+
+#UnacceptedLista input[type=submit]{
+  width: 100px;
+}
+#UnacceptedLista{
+  float: right;
+  margin-right: 25%;
+}
+
+/************************/
+/*      uzytkownicy     */
+#container-galeria-konto{
+color: white;
+
+}
+
+#container-galeria-konto a:link, a:visited { color: white;}
